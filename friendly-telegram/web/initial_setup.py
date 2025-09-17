@@ -30,6 +30,8 @@ from aiohttp import web
 from .. import utils
 
 is_okteto = "OKTETO" in os.environ
+is_hikkahost = "HIKKAHOST" in os.environ
+
 BASE_DIR = "/data" if is_okteto else os.path.dirname(utils.get_base_dir())
 if is_okteto:
     oktetourl = os.path.join(BASE_DIR, "okteto.json")

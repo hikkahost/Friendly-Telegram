@@ -26,6 +26,7 @@ if (
     getpass.getuser() == "root"
     and "--root" not in " ".join(sys.argv)
     and "OKTETO" not in os.environ
+    and "HIKKAHOST" not in os.environ
 ):
     print("!" * 30)
     print("NEVER EVER RUN USERBOT FROM ROOT")

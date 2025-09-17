@@ -47,6 +47,7 @@ def get_platform_name():
     """Get the name of the platform we're running on"""
     is_termux = bool(os.popen('echo $PREFIX | grep -o "com.termux"').read())
     is_okteto = "OKTETO" in os.environ
+    is_hikkahost = "HIKKAHOST" in os.environ
 
     is_lavhost = "LAVHOST" in os.environ
 
@@ -55,6 +56,9 @@ def get_platform_name():
 
     if is_okteto:
         return "☁️ Okteto"
+    
+    if is_hikkahost:
+        return "🌘 HikkaHost"
 
     if is_termux:
         return "📱 Termux"

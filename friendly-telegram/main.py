@@ -54,6 +54,7 @@ from .translations.core import Translator
 
 __version__ = (3, 1, 25)
 is_okteto = "OKTETO" in os.environ
+is_hikkahost = "HIKKAHOST" in os.environ
 
 BASE_DIR = "/data" if is_okteto else os.path.dirname(utils.get_base_dir())
 
@@ -109,7 +110,7 @@ save_config_key("use_fs_for_modules", get_config_key("use_fs_for_modules"))
 
 
 def gen_port():
-    if "OKTETO" in os.environ:
+    if "OKTETO" in os.environ or "HIKKAHOST" in os.environ:
         return 8080
 
     # But for own server we generate new free port, and assign to it

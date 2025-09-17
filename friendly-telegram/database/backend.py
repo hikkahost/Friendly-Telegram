@@ -11,6 +11,7 @@ import os
 from .. import main, utils
 
 is_okteto = "OKTETO" in os.environ
+is_hikkahost = "HIKKAHOST" in os.environ
 
 ORIGIN = "/data" if is_okteto else "/".join(main.__file__.split("/")[:-2])
 

@@ -123,6 +123,10 @@ class UpdaterMod(loader.Module):
                             "url": "https://cloud.okteto.com/#/deploy?repository=https://github.com/GeekTG/Friendly-Telegram",
                         },
                         {
+                            "text": "🌘 Install to HikkaHost",
+                            "url": "https://t.me/hikkahost_bot",
+                        },
+                        {
                             "text": "🖥 Install to lavhost",
                             "url": "https://t.me/lavhostbot?start=R2Vla1RH",
                         },
